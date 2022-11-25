@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Store</title>
+</head>
+<body>
+    
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-xxl-5">
+            <div class="goods_box" id="goods">
+                <div class="menu">
+                    <input type="text" placeholder="Search" class="search">
+                    <button class="add btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">&#10010;</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="goods table mt-3" id="table1">
+                        <thead>
+                            <tr class="table-primary align-middle">
+                                <th data-type="number">№</th>
+                                <th data-type="string">Name </th>
+                                <th data-type="number">Price, &#8372</th>
+                                <th data-type="number">Inventory</th>
+                                <th ></th>
+                                <th ></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                             <!-- Строки с товарами -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-xxl-7">
+            <div class="price_box"></div>
+            <div class="menu">
+                <div class="price_title">Total: <span class="price_result">0  &#8372</span></div>
+            </div>
+            <div class="table-responsive">
+                <table class="price table mt-3" id="table2">
+                    <thead>
+                        <tr class="table-primary align-middle">
+                            <th data-type="number">№</th>
+                            <th data-type="string">Name </th>
+                            <th data-type="number">Price/one, &#8372</th>
+                            <th data-type="number">Inventory</th>
+                            <th >Sale, %</th>
+                            <th data-type="number"> Total price &#8372</th>
+                            <th ></th>
+                        </tr>
+                    </thead>
+                    <tbody class="card">
+ <!-- Строки с товарами в корзине -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Модальное окно бдобавление товара -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="good_name" class="form-lable">Product name</label>
+            <input type="text" class="form-control mb-3" name="" id="good_name" maxlength="40">
+            <label for="good_price" class="form-lable">Price</label>
+            <input type="text" class="form-control mb-3" name="" id="good_price" >
+            <label for="good_count" class="form-lable">Inventory</label>
+            <input type="text" class="form-control mb-3" name="" id="good_inventory" min="1" value="1" >
+            <button type="submit" class="btn add_new btn-success">Add</button>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/list.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
